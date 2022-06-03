@@ -8,16 +8,32 @@ public class RadioTest {
 
 
     @Test
+    void increaseVolumeMax() {
+
+        Radio radio = new Radio();
+
+        radio.setCurrentVolume(10);
+
+        radio.increaseVolume();
+        radio.maxVolume();
+        int actual = radio.getCurrentVolume();
+        int expected = 0;
+
+        Assertions.assertEquals(actual, expected);
+
+    }
+
+    @Test
     void increaseVolume() {
 
         Radio radio = new Radio();
 
-        radio.setCurrentVolume(9);
+        radio.setCurrentVolume(8);
 
         radio.increaseVolume();
 
         int actual = radio.getCurrentVolume();
-        int expected = 10;
+        int expected = 9;
 
         Assertions.assertEquals(actual, expected);
 
@@ -34,6 +50,22 @@ public class RadioTest {
 
         int actual = radio.getCurrentVolume();
         int expected = 7;
+
+        Assertions.assertEquals(actual, expected);
+
+    }
+
+    @Test
+    void reductionVolumeMin() {
+
+        Radio radio = new Radio();
+
+        radio.setCurrentVolume(0);
+
+        radio.reductionVolume();
+        radio.minVolume();
+        int actual = radio.getCurrentVolume();
+        int expected = 10;
 
         Assertions.assertEquals(actual, expected);
 
@@ -120,6 +152,23 @@ public class RadioTest {
     }
 
     @Test
+    void nextStationMax() {
+
+        Radio radio = new Radio();
+
+        radio.setCurrentStation(9);
+
+        radio.nextStation();
+        radio.maxStation();
+
+        int actual = radio.getCurrentStation();
+        int expected = 0;
+
+        Assertions.assertEquals(actual, expected);
+
+    }
+
+    @Test
     void prevStation() {
 
         Radio radio = new Radio();
@@ -134,9 +183,22 @@ public class RadioTest {
         Assertions.assertEquals(actual, expected);
 
     }
+    @Test
+    void prevStationMin() {
 
+        Radio radio = new Radio();
 
+        radio.setCurrentStation(0);
 
+        radio.prevStation();
+        radio.minStation();
+
+        int actual = radio.getCurrentStation();
+        int expected = 9;
+
+        Assertions.assertEquals(actual, expected);
+
+    }
 
     @Test
     void maxStation() {
@@ -201,6 +263,8 @@ public class RadioTest {
         Assertions.assertEquals(actual, expected);
 
     }
+
+
 }
 
 
