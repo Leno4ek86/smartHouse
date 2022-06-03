@@ -22,14 +22,14 @@ public class Radio {
 
     public void maxVolume() {
 
-       int newCurrentVolume = 0;
-       this.currentVolume = newCurrentVolume;
-     }
+        int newCurrentVolume = 0;
+        this.currentVolume = newCurrentVolume;
+    }
 
-      public void minVolume() {
+    public void minVolume() {
 
         int newCurrentVolume = 10;
-      this.currentVolume = newCurrentVolume;
+        this.currentVolume = newCurrentVolume;
     }
 
     public void setCurrentVolume(int currentVolume) {
@@ -66,15 +66,15 @@ public class Radio {
 
     public void maxStation() {
 
-     int newCurrentStation = 0;
-       this.currentStation = newCurrentStation;
-      }
+        int newCurrentStation = 0;
+        this.currentStation = newCurrentStation;
+    }
 
     public void minStation() {
 
-      int newCurrentStation = 9;
+        int newCurrentStation = 9;
         this.currentStation = newCurrentStation;
-     }
+    }
 
 
     public void setCurrentStation(int currentStation) {

@@ -183,6 +183,7 @@ public class RadioTest {
         Assertions.assertEquals(actual, expected);
 
     }
+
     @Test
     void prevStationMin() {
 
@@ -263,7 +264,6 @@ public class RadioTest {
         Assertions.assertEquals(actual, expected);
 
     }
-
 
 }
 
